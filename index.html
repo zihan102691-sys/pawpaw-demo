@@ -35,37 +35,21 @@
 
     <!-- Magic particles -->
     <div class="particles" aria-hidden="true">
-      <span class="p p1"></span>
-      <span class="p p2"></span>
-      <span class="p p3"></span>
-      <span class="p p4"></span>
-      <span class="p p5"></span>
-      <span class="p p6"></span>
-      <span class="p p7"></span>
-      <span class="p p8"></span>
-      <span class="p p9"></span>
-      <span class="p p10"></span>
-      <span class="p p11"></span>
-      <span class="p p12"></span>
-      <span class="p p13"></span>
-      <span class="p p14"></span>
-      <span class="p p15"></span>
-      <span class="p p16"></span>
-      <span class="p p17"></span>
-      <span class="p p18"></span>
-      <span class="p p19"></span>
-      <span class="p p20"></span>
-      <span class="p p21"></span>
-      <span class="p p22"></span>
-      <span class="p p23"></span>
-      <span class="p p24"></span>
+      <span class="p p1"></span><span class="p p2"></span><span class="p p3"></span>
+      <span class="p p4"></span><span class="p p5"></span><span class="p p6"></span>
+      <span class="p p7"></span><span class="p p8"></span><span class="p p9"></span>
+      <span class="p p10"></span><span class="p p11"></span><span class="p p12"></span>
+      <span class="p p13"></span><span class="p p14"></span><span class="p p15"></span>
+      <span class="p p16"></span><span class="p p17"></span><span class="p p18"></span>
+      <span class="p p19"></span><span class="p p20"></span><span class="p p21"></span>
+      <span class="p p22"></span><span class="p p23"></span><span class="p p24"></span>
     </div>
 
-    <!-- Orbs -->
+    <!-- Sky orbs -->
     <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
     <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
 
+    <!-- ── Text content ── -->
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="eyebrow-dot"></span>
@@ -74,41 +58,54 @@
       </div>
 
       <h1 class="hero-title" id="hero-title">
-        Hi friend!<br />
-        Come adventure<br />
+        Hi friend! Come <span class="grad-adventure">adventure</span><br />
         with me&nbsp;🐾
       </h1>
 
       <p class="hero-subtitle">
-        Where four mythical creatures teach your child Mandarin, manners, and magic
+        Where four mythical creatures teach your child
+        <span class="grad-mandarin">Mandarin</span>, manners, and <span class="grad-magic">magic</span>
         — through the world of <em>Qi Ming Jie</em>.
       </p>
 
       <div class="hero-cta-group">
-        <a href="#cta" class="btn-primary btn-glow">Book a Demo Class</a>
-        <a href="#creatures" class="btn-ghost">Meet Our Creatures ↓</a>
-      </div>
-
-      <!-- Floating creatures -->
-      <div class="hero-creatures" aria-hidden="true">
-        <div class="creature-bubble cb-1">
-          <span class="cb-emoji">🦄</span>
-          <span class="cb-name">Kiki</span>
-        </div>
-        <div class="creature-bubble cb-2">
-          <span class="cb-emoji">🦊</span>
-          <span class="cb-name">Foxi</span>
-        </div>
-        <div class="creature-bubble cb-3">
-          <span class="cb-emoji">🐉</span>
-          <span class="cb-name">Bai</span>
-        </div>
-        <div class="creature-bubble cb-4">
-          <span class="cb-emoji">🦅</span>
-          <span class="cb-name">Feni</span>
-        </div>
+        <a href="#cta" class="btn-primary btn-glow">Begin the Adventure 🐾</a>
+        <a href="#cta" class="btn-ghost">Book Your Free Demo Class</a>
       </div>
     </div>
+
+    <!-- ── Mountain scene ── -->
+    <div class="hero-mountains" aria-hidden="true">
+
+      <!-- Far mountains -->
+      <svg class="mt mt-far" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,300 L0,148 C35,140 65,118 95,88 C112,70 124,82 142,62 C156,45 168,58 186,38 C200,21 214,40 234,65 C256,93 274,64 305,44 C328,28 342,46 362,70 C386,98 408,66 442,46 C468,30 484,50 506,75 C532,104 554,70 588,50 C614,33 630,54 652,78 C678,106 700,72 735,52 C762,35 778,56 800,80 C826,108 850,72 888,52 C916,35 932,58 955,82 C982,110 1005,74 1042,54 C1070,37 1088,60 1112,84 C1140,112 1165,75 1205,55 C1238,38 1256,60 1282,86 C1310,114 1350,78 1440,90 L1440,300 Z"/>
+      </svg>
+
+      <!-- Back clouds (z behind Kiki) -->
+      <div class="hero-cloud cloud-back cloud-1"></div>
+      <div class="hero-cloud cloud-back cloud-2"></div>
+
+      <!-- Mid mountains -->
+      <svg class="mt mt-mid" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,300 L0,198 C48,186 95,172 138,160 C165,151 183,162 210,158 C242,153 268,168 300,175 C330,182 356,162 390,150 C422,138 448,156 480,168 C514,180 542,158 578,144 C608,132 628,150 660,164 C694,178 720,152 758,138 C792,125 815,144 850,158 C886,172 912,148 950,134 C984,121 1008,142 1046,156 C1086,171 1114,145 1158,132 C1196,120 1220,142 1262,158 C1302,173 1354,142 1440,155 L1440,300 Z"/>
+      </svg>
+
+      <!-- Kiki floating in the cloud sea -->
+      <div class="hero-kiki-wrap">
+        <img src="IMG_6260.jpeg" alt="Kiki the Qilin, magical guardian of Qi Ming Jie" class="hero-kiki" />
+      </div>
+
+      <!-- Front clouds (z in front of Kiki) -->
+      <div class="hero-cloud cloud-front cloud-3"></div>
+      <div class="hero-cloud cloud-front cloud-4"></div>
+
+      <!-- Near hills (front-most layer) -->
+      <svg class="mt mt-near" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,300 L0,248 C50,238 98,242 145,232 C175,225 198,236 232,241 C268,247 298,229 338,222 C373,216 398,229 436,238 C474,247 500,228 540,220 C576,212 600,226 640,235 C680,244 706,224 748,216 C786,208 812,224 854,233 C896,242 924,222 965,215 C1004,208 1030,224 1074,233 C1118,242 1158,220 1215,228 C1270,236 1338,215 1440,225 L1440,300 Z"/>
+      </svg>
+
+    </div><!-- /hero-mountains -->
 
     <!-- Scroll hint -->
     <div class="scroll-hint" aria-hidden="true">
@@ -130,14 +127,14 @@
   ══════════════════════════════════════ -->
   <section class="difference" id="difference" aria-labelledby="diff-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <div class="section-label">The PawPaw Difference</div>
         <h2 class="section-title" id="diff-title">
           Not a class.<br />An adventure.
         </h2>
       </div>
 
-      <div class="diff-grid">
+      <div class="diff-grid reveal reveal-stagger">
         <div class="diff-card">
           <div class="diff-icon-wrap diff-icon-gold">
             <span class="diff-icon">🐾</span>
@@ -170,7 +167,7 @@
   ══════════════════════════════════════ -->
   <section class="creatures-section" id="creatures" aria-labelledby="creatures-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <div class="section-label">齐鸣界 · Qi Ming Jie</div>
         <h2 class="section-title" id="creatures-title">
           Meet Your Child's<br />Magical Companions
@@ -178,9 +175,9 @@
         <p class="section-sub">Four ancient guardians, each with their own elemental gift — and an endless curiosity about your child.</p>
       </div>
 
-      <div class="creatures-grid">
+      <div class="creatures-grid reveal reveal-stagger">
 
-        <!-- Kiki -->
+        <!-- Kiki — real image -->
         <article class="creature-card card-wood">
           <div class="card-glow card-glow-wood" aria-hidden="true"></div>
           <div class="card-content">
@@ -188,12 +185,14 @@
               <span class="element-char">木</span>
               <span class="element-name">Wood</span>
             </div>
-            <div class="card-emoji" aria-label="Kiki the Qilin">🦄</div>
+            <div class="card-img-wrap" aria-label="Kiki the Qilin">
+              <img src="IMG_6260.jpeg" alt="Kiki" class="card-kiki-img" />
+            </div>
             <div class="card-body">
               <h3 class="card-name">Kiki</h3>
               <p class="card-chinese">麒麟 · Qílín</p>
-              <p class="card-keywords">Wisdom &amp; Growth</p>
-              <p class="card-desc">The gentle guardian of the ancient forest, who teaches through stories whispered among the trees and lessons written in the stars.</p>
+              <p class="card-keywords">🌿 The Gentle Protector</p>
+              <p class="card-desc">Kiki carries an ancient jade scroll passed down from Confucius's time. When you get stuck, Kiki opens the scroll to help narrow down the answer. Together, you'll defeat the dark noise.</p>
             </div>
           </div>
           <div class="card-tag">Age 3–5 favourite</div>
@@ -274,14 +273,14 @@
   ══════════════════════════════════════ -->
   <section class="beyond" id="beyond" aria-labelledby="beyond-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <div class="section-label">More Than Mandarin</div>
         <h2 class="section-title" id="beyond-title">
           We're raising<br />whole humans.
         </h2>
       </div>
 
-      <div class="beyond-grid">
+      <div class="beyond-grid reveal reveal-stagger">
         <div class="beyond-item">
           <div class="beyond-icon-wrap">
             <span class="beyond-icon">🌸</span>
@@ -318,7 +317,7 @@
   ══════════════════════════════════════ -->
   <section class="families" id="families" aria-labelledby="families-title">
     <div class="container">
-      <div class="families-inner">
+      <div class="families-inner reveal">
         <div class="families-label">
           <span class="section-label">For Families Who Think Differently</span>
         </div>
@@ -365,27 +364,18 @@
   ══════════════════════════════════════ -->
   <section class="cta-section" id="cta" aria-labelledby="cta-title">
 
-    <!-- Particles -->
     <div class="cta-particles" aria-hidden="true">
-      <span class="cp cp1"></span>
-      <span class="cp cp2"></span>
-      <span class="cp cp3"></span>
-      <span class="cp cp4"></span>
-      <span class="cp cp5"></span>
-      <span class="cp cp6"></span>
-      <span class="cp cp7"></span>
-      <span class="cp cp8"></span>
-      <span class="cp cp9"></span>
-      <span class="cp cp10"></span>
-      <span class="cp cp11"></span>
-      <span class="cp cp12"></span>
+      <span class="cp cp1"></span><span class="cp cp2"></span><span class="cp cp3"></span>
+      <span class="cp cp4"></span><span class="cp cp5"></span><span class="cp cp6"></span>
+      <span class="cp cp7"></span><span class="cp cp8"></span><span class="cp cp9"></span>
+      <span class="cp cp10"></span><span class="cp cp11"></span><span class="cp cp12"></span>
     </div>
 
     <div class="cta-orb cta-orb-1" aria-hidden="true"></div>
     <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
 
     <div class="container">
-      <div class="cta-inner">
+      <div class="cta-inner reveal">
         <div class="cta-badge">🎁 Founding Family Offer</div>
 
         <h2 class="cta-title" id="cta-title">
@@ -452,6 +442,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- Scroll reveal (no framework, pure IntersectionObserver) -->
+  <script>
+    (function () {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        io.observe(el);
+      });
+    })();
+  </script>
 
 </body>
 </html>
