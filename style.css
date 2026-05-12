@@ -592,17 +592,17 @@ h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
 .creatures-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem; }
 
 .creature-card {
-  border-radius: var(--radius-l); padding: 3rem 2.8rem;
+  border-radius: var(--radius-m); padding: 2.8rem 2.2rem;
   position: relative; overflow: hidden; cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.7);
   transition: transform 0.4s var(--ease-bounce), box-shadow 0.4s;
 }
-.creature-card:hover { transform: translateY(-12px) scale(1.015); box-shadow: var(--shadow-hover); }
+.creature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
 
-.card-wood  { background: linear-gradient(145deg, var(--wood-from), var(--wood-to),  #E8F8E8); }
-.card-water { background: linear-gradient(145deg, var(--water-from),var(--water-to), #D8EEF8); }
-.card-earth { background: linear-gradient(145deg, var(--earth-from),var(--earth-to), #F0EAD8); }
-.card-fire  { background: linear-gradient(145deg, var(--fire-from), var(--fire-to),  #FDE8B0); }
+.card-wood  { background: linear-gradient(145deg, #E8F5E9, #C8E6C9); }
+.card-water { background: linear-gradient(145deg, #E3F2FD, #BBDEFB); }
+.card-earth { background: linear-gradient(145deg, #FFF8E1, #FFECB3); }
+.card-fire  { background: linear-gradient(145deg, #FCE4EC, #F8BBD0); }
 
 .card-glow { position: absolute; top: -40%; right: -20%; width: 260px; height: 260px; border-radius: 50%; pointer-events: none; filter: blur(50px); opacity: 0.55; transition: opacity 0.4s; }
 .creature-card:hover .card-glow { opacity: 0.9; }
@@ -611,7 +611,10 @@ h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
 .card-glow-earth { background: radial-gradient(circle, rgba(200,170,120,0.8), transparent); }
 .card-glow-fire  { background: radial-gradient(circle, rgba(255,180, 60,0.8), transparent); }
 
-.card-content { position: relative; z-index: 1; }
+.card-content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
 
 .card-element {
   display: inline-flex; align-items: baseline; gap: 0.4rem; margin-bottom: 1.2rem;
@@ -621,45 +624,51 @@ h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
 }
 .element-char { font-size: 1rem; font-family: 'Playfair Display', serif; letter-spacing: 0; text-transform: none; }
 
-/* Kiki card: circular photo */
+/* Creature circular photo */
 .card-img-wrap {
-  width: 110px; height: 110px; border-radius: 50%; overflow: hidden;
-  margin-bottom: 1.2rem;
-  border: 3px solid rgba(255,255,255,0.72);
-  box-shadow: 0 8px 24px rgba(44,29,14,0.15);
-  animation: breathe 5s 0s ease-in-out infinite;
+  width: 200px; height: 200px; border-radius: 50%; overflow: hidden;
+  margin-bottom: 1.6rem;
+  border: 4px solid rgba(255,255,255,0.80);
+  box-shadow: 0 10px 32px rgba(44,29,14,0.14);
+  animation: breathe 5s ease-in-out infinite;
+  flex-shrink: 0;
+  background: transparent;
 }
-.card-kiki-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-
-/* Other emojis */
-.card-emoji {
-  font-size: 4.5rem; line-height: 1; margin-bottom: 1.2rem; display: block;
-  filter: drop-shadow(0 6px 12px rgba(44,29,14,0.15));
-}
-.card-water .card-emoji { animation: breathe 5s 0.9s ease-in-out infinite; }
-.card-earth .card-emoji { animation: breathe 5s 1.8s ease-in-out infinite; }
-.card-fire  .card-emoji { animation: breathe 5s 2.7s ease-in-out infinite; }
-
-.card-name    { font-size: 2.6rem; font-weight: 700; color: var(--text-ink); line-height: 1; margin-bottom: 0.3rem; letter-spacing: -0.02em; }
-.card-chinese { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.92rem; color: rgba(44,29,14,0.55); margin-bottom: 0.3rem; }
-
-.card-zh-element {
-  font-family: 'Noto Sans SC', sans-serif;
-  font-size: 1rem;
-  color: var(--gold-dark);
-  opacity: 0.8;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.05em;
+.card-creature-img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  mix-blend-mode: multiply;
 }
 
-.card-keywords { font-family: 'Fredoka', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--text-dark); margin-bottom: 1rem; }
-.card-desc     { font-size: 0.92rem; color: rgba(44,29,14,0.65); line-height: 1.75; max-width: 300px; }
+/* Stagger breathe animation per card */
+.card-water .card-img-wrap { animation-delay: 0.8s; }
+.card-earth .card-img-wrap { animation-delay: 1.6s; }
+.card-fire  .card-img-wrap { animation-delay: 2.4s; }
 
-.card-tag {
-  position: absolute; bottom: 1.6rem; right: 1.8rem;
-  font-family: 'Quicksand', sans-serif; font-size: 0.72rem; font-weight: 700;
-  letter-spacing: 0.06em; text-transform: uppercase; color: rgba(44,29,14,0.4);
-  background: rgba(255,255,255,0.55); padding: 0.3rem 0.75rem; border-radius: 100px;
+.card-body { text-align: center; }
+
+.card-name {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.9rem; font-weight: 700;
+  color: var(--text-ink); line-height: 1.1;
+  margin-bottom: 0.75rem; letter-spacing: -0.01em;
+}
+
+.card-element-tag {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+  background: rgba(255,255,255,0.70);
+  border: 1px solid rgba(255,255,255,0.95);
+  padding: 0.3rem 0.9rem; border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  font-size: 0.92rem; color: rgba(44,29,14,0.68);
+  line-height: 1.75; max-width: 280px; margin: 0 auto;
+  font-style: italic;
 }
 
 /* ════════════════════════════════════════
